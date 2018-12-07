@@ -3,7 +3,7 @@ import { EventEmitter } from '@angular/core';
 
 export class RecipeService {
   private recipes: Recipe[] = [
-    new Recipe('Siscobob', 
+    new Recipe('1', 'Siscobob', 
       'Beef and some Vegitables', 
       'https://www.nps.gov/subjects/camping/images/recipe_1.jpg?maxwidth=1200&maxheight=1200&autorotate=false',
       [ 
@@ -13,7 +13,7 @@ export class RecipeService {
         new Ingredient('Onion', 1)
       ]
     ),
-    new Recipe('Pizza', 
+    new Recipe('2', 'Pizza', 
       'cheeses, shrimp, pesto', 
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXW2k0zbFaD09qzLlnQl5lVFCz252vdkdlhYgTCqtINJiFZcXk',
       [ 
@@ -30,5 +30,9 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(id: string): Recipe {
+    return this.recipes.find(r => r['id'] === id);
   }
 }
