@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ShoppingAppService';
+  choiceToOpen: string = "recipes" ;
+
+  onSelectBrowser(choice: string){
+    this.choiceToOpen = choice;
+  }
+
 }
