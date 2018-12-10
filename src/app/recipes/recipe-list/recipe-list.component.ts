@@ -19,7 +19,11 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  onSelect(recipe: Recipe) {
-    this.router.navigate(['detail', recipe.id], { relativeTo: this.activatedRoute });
+  // onSelect(recipe: Recipe) {
+  //   this.router.navigate(['detail', recipe.id], { relativeTo: this.activatedRoute });
+  // }
+
+  addNew() {
+    this.router.navigate(['edit', 'new'], { relativeTo: this.activatedRoute });
   }
 }

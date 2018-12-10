@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
 import { BasicHighlightDirective } from './directive/basic-highlight.directive';
@@ -18,6 +17,8 @@ import { BestHighlightDirective } from './directive/best-highlight.directive';
 import { UnlessDirective } from './directive/unless.directive';
 import { DropdownDirective } from './directive/dropdown.directive';
 import { ShoppingService } from './services/shopping.service';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,15 @@ import { ShoppingService } from './services/shopping.service';
     RecipesComponent,
     ShoppingListComponent,
     RecipeListComponent,
-    RecipeItemComponent,
     RecipeDetailComponent,
     ShoppingEditComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
     BestHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    RecipeEditComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

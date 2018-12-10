@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="text-center pb-4 pt-3" *ngIf="isNew">Add a new recipe!</h3>
+        <h3 class="text-center pb-4 pt-3" *ngIf="!isNew">Edit this recipe!</h3>
+        <form (submit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Recipe Name : </label>&nbsp;&nbsp;
+            <input type="text" name="name" [(ngModel)]="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description : </label>&nbsp;&nbsp;
+            <input type="text" name="description" [(ngModel)]="description" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="imagePath">Image path : </label>&nbsp;&nbsp;
+            <input type="imagePath" name="imagePath" [(ngModel)]="imagePath" class="form-control" required>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primary btn-block">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  
